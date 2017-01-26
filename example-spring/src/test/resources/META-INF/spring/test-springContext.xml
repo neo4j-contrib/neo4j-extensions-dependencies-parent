@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath*:neo4j-extensions-spring-maven.properties"
+                                  ignore-resource-not-found="false" ignore-unresolvable="true"/>
+
+    <context:property-placeholder location="classpath:META-INF/spring/test-springContext.properties"
+                                  ignore-resource-not-found="false" ignore-unresolvable="true"/>
+
+    <context:annotation-config/>
+
+    <context:spring-configured/>
+
+    <context:component-scan base-package="org.neo4j.extensions.test.spring">
+        <context:include-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <bean id="communityNeoServerTestFactory"
+          class="org.neo4j.extensions.test.spring.core.CommunityNeoServerTestFactory"/>
+
+    <bean id="communityNeoServerTestInstance" factory-bean="communityNeoServerTestFactory" factory-method="instance"/>
+
+</beans>
