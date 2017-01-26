@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.neo4j</groupId>
     <artifactId>neo4j-extensions-parent</artifactId>
-    <version>3.0.8.0-SNAPSHOT</version>
+    <version>3.1.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Neo4j :: Extensions :: Parent</name>
@@ -27,7 +26,7 @@
         <version.org.eclipse.jetty>9.2.9.v20150224</version.org.eclipse.jetty>
         <version.org.hamcrest>1.3</version.org.hamcrest>
         <version.org.mockito>1.9.5</version.org.mockito>
-        <version.org.neo4j>3.0.8</version.org.neo4j>
+        <version.org.neo4j>3.1.1</version.org.neo4j>
         <version.org.neo4j.ogm>2.0.5</version.org.neo4j.ogm>
         <version.org.parboiled>1.1.7</version.org.parboiled>
         <version.org.rrd4j>2.2</version.org.rrd4j>
@@ -325,12 +324,12 @@
         </dependency>
         <dependency>
             <groupId>org.neo4j</groupId>
-            <artifactId>neo4j-cypher-compiler-3.0</artifactId>
+            <artifactId>neo4j-cypher-compiler-3.1</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.neo4j</groupId>
-            <artifactId>neo4j-cypher-frontend-3.0</artifactId>
+            <artifactId>neo4j-cypher-frontend-3.1</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -934,13 +933,13 @@
             </dependency>
             <dependency>
                 <groupId>org.neo4j</groupId>
-                <artifactId>neo4j-cypher-compiler-3.0</artifactId>
+                <artifactId>neo4j-cypher-compiler-3.1</artifactId>
                 <version>${version.org.neo4j}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.neo4j</groupId>
-                <artifactId>neo4j-cypher-frontend-3.0</artifactId>
+                <artifactId>neo4j-cypher-frontend-3.1</artifactId>
                 <version>${version.org.neo4j}</version>
                 <scope>provided</scope>
             </dependency>
@@ -1608,7 +1607,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore/>
+                                        <ignore />
                                     </action>
                                 </pluginExecution>
                             </pluginExecutions>
